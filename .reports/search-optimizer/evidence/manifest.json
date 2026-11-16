@@ -1,0 +1,26 @@
+{
+ "url": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+ "final_url": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+ "captured_at": "2026-11-17T04:15:00Z",
+ "target_type": "live-url+repo",
+ "repo": "tapioca-junction-site (worktree-s9-site)",
+ "note": "page.html is byte-identical to the committed index.html. robots.txt and llms.txt were fetched at the origin (host root Pages repo); the site path had neither.",
+ "files": {
+  "page.html": {"status": 200},
+  "head.json": {"status": "derived"},
+  "robots.txt": {"status": 200, "url": "https://nguyenvanlamm.github.io/robots.txt"},
+  "sitemap.xml": {"status": 404, "reason": "not found", "url": "https://nguyenvanlamm.github.io/sitemap.xml"},
+  "llms.txt": {"status": 200, "url": "https://nguyenvanlamm.github.io/llms.txt"}
+ },
+ "owners": {
+  "meta-tags": "seo-ai-optimizer",
+  "robots-sitemap": "seo-ai-optimizer",
+  "structured-data": "seo-ai-optimizer",
+  "llms-txt": "seo-ai-optimizer",
+  "crawler-access": "seo-ai-optimizer",
+  "markdown-pages": "not-covered: owner did not allow an outside scan (G4)",
+  "ai-actions": "not-covered: no web-branch member evaluates it; run /ux-ax-review or /design-optimizer",
+  "agent-readiness-scan": "not-covered: owner did not allow an outside scan (G4)",
+  "virality": "viral-product-evaluator"
+ }
+}

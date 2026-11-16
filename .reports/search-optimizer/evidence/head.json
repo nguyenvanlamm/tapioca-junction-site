@@ -1,0 +1,13 @@
+{
+ "title": "Tapioca Junction: a bubble-tea marble-run puzzle for iPhone",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "description": "Set the flippers, pour the jar and watch every jelly pearl find its cup. A calm logic puzzle at a bubble-tea counter after dark. Coming soon to iPhone. No ads, no timers.",
+  "og:title": "Tapioca Junction",
+  "og:description": "Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone.",
+  "og:image": "https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png",
+  "theme-color": "#140C09"
+ },
+ "canonical": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+ "jsonld": []
+}
