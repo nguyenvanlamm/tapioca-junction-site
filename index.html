@@ -3,15 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tapioca Junction: a bubble-tea marble-run puzzle for iPhone</title>
-<meta name="description" content="Set the flippers, pour the jar and watch every jelly pearl find its cup. A calm logic puzzle at a bubble-tea counter after dark. Coming soon to iPhone. No ads, no timers.">
+<title>Tapioca Junction: a bubble-tea logic puzzle for iPhone</title>
+<meta name="description" content="Set the flippers, pour the jar and watch every jelly pearl find its cup. A calm bubble-tea logic puzzle for iPhone, coming soon. No ads, no timers.">
 <link rel="canonical" href="https://nguyenvanlamm.github.io/tapioca-junction-site/">
-<link rel="icon" type="image/png" href="assets/icon-180.png">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
-<meta property="og:title" content="Tapioca Junction">
-<meta property="og:description" content="Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone.">
-<meta property="og:image" content="https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="author" content="Luong Nguyen">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tapioca Junction">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://nguyenvanlamm.github.io/tapioca-junction-site/">
+<meta property="og:title" content="Tapioca Junction: a bubble-tea logic puzzle for iPhone">
+<meta property="og:description" content="Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone. No ads, no timers.">
+<meta property="og:image" content="https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tapioca Junction: Set the flippers. Pour the jar. Order up. Beside it, an order in play: jars of jelly pearls above clear tubes with flippers.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tapioca Junction: a bubble-tea logic puzzle for iPhone">
+<meta name="twitter:description" content="Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone.">
+<meta name="twitter:image" content="https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg">
+<meta name="twitter:image:alt" content="Tapioca Junction: Set the flippers. Pour the jar. Order up. Beside it, an order in play.">
 <meta name="theme-color" content="#140C09">
+<meta name="color-scheme" content="dark">
+<link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["VideoGame","MobileApplication"],"@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#game","name":"Tapioca Junction","url":"https://nguyenvanlamm.github.io/tapioca-junction-site/","description":"A calm logic puzzle for iPhone at a bubble-tea counter after dark: set the flippers, pour a jar of jelly pearls through clear tubes, and seal every cup. Every flipper flips after each pearl, so the route you set decides where each pearl lands. Coming soon to the App Store.","creativeWorkStatus":"Upcoming","genre":["Puzzle","Casual"],"gamePlatform":"iPhone","operatingSystem":"iOS","applicationCategory":"GameApplication","applicationSubCategory":"Puzzle","inLanguage":"en","playMode":"SinglePlayer","numberOfPlayers":{"@type":"QuantitativeValue","value":1},"image":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg","screenshot":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png","author":{"@type":"Person","name":"Luong Nguyen"},"publisher":{"@type":"Person","name":"Luong Nguyen"}},
+{"@type":"WebSite","@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#site","name":"Tapioca Junction","url":"https://nguyenvanlamm.github.io/tapioca-junction-site/","inLanguage":"en","about":{"@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#game"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"When can I play?","acceptedAnswer":{"@type":"Answer","text":"Tapioca Junction is coming soon to iPhone. This page will link to the App Store as soon as it is live."}},
+{"@type":"Question","name":"Is there a timer or an energy system?","acceptedAnswer":{"@type":"Answer","text":"No. There are no timers, hearts or waits. A jam only ends that attempt, and Restart is always free."}},
+{"@type":"Question","name":"Does it show ads or track me?","acceptedAnswer":{"@type":"Answer","text":"No ads, no analytics, no account. Progress stays on your phone."}},
+{"@type":"Question","name":"I'm colour-blind. Can I play?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every flavour carries its own stamp inside the pearl and on its cup, so shape alone tells you where a pearl belongs."}},
+{"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. Everything runs on the device; only purchases talk to the App Store."}}]}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,7 +66,8 @@
   .facts { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 8px 18px;
     font: 400 14px/1.4 "DM Mono", monospace; color: var(--ink3); }
   .facts li::before { content: "● "; color: var(--taro); }
-  .shot { justify-self: center; width: min(340px, 100%); border-radius: 34px; border: 1px solid var(--line);
+  .hero picture { justify-self: center; display: block; width: min(340px, 100%); }
+  .shot { display: block; width: 100%; height: auto; border-radius: 34px; border: 1px solid var(--line);
     box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 60px rgba(137,81,191,.25); }
   section { padding: 64px 0; border-top: 1px solid var(--line); }
   h2 { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; margin: 0 0 12px; letter-spacing: -.01em; }
@@ -89,14 +117,17 @@
       <div>
         <p class="eyebrow">Coming soon to iPhone</p>
         <h1>Set the flippers. Pour the jar. Order&nbsp;up.</h1>
-        <p class="sub">A calm logic puzzle at a bubble-tea counter after dark. Every pearl you pour flips the next flipper, so each jar plays out like a little marble run you planned.</p>
+        <p class="sub">A calm logic puzzle at a bubble-tea counter after dark. Every pearl flips the flipper it passes, so each jar runs down the route you set before you poured, pearl by pearl.</p>
         <a class="btn" href="#how">See how a jar plays out</a>
         <ul class="facts">
           <li>No ads</li><li>No timers or lives</li><li>Plays offline</li><li>40 orders free</li>
         </ul>
       </div>
-      <img class="shot" src="assets/game.png" width="390" height="844"
-        alt="Tapioca Junction, Late Night order 10: jars of jelly pearls above a lattice of clear tubes with flippers, sealed-cup slots below.">
+      <picture>
+        <source srcset="assets/game.webp" type="image/webp">
+        <img class="shot" src="assets/game.png" width="390" height="844" fetchpriority="high"
+          alt="Tapioca Junction, Late Night order 10: jars of jelly pearls above a lattice of clear tubes with flippers, empty cups below.">
+      </picture>
     </div>
 
     <section aria-labelledby="track">
@@ -144,7 +175,7 @@
       <p class="lead">The first two menus are free to play from start to finish.</p>
       <ul class="prices">
         <li><span>House Classics and Fruit Teas: 40 orders</span><em>Free</em></li>
-        <li><span>Full Menu: opens Cheese Foam and Late Night, 40 more orders. Bought once, yours to restore.</span><em>$3.49</em></li>
+        <li><span>Full Menu: Cheese Foam and Late Night, 40 more orders. Cheese Foam order 1 opens at once; Late Night opens when you finish Cheese Foam. Bought once, yours to restore.</span><em>$3.49</em></li>
         <li><span>Barista's Apron: 5 Undo, 5 Peek and 3 Wide Jar</span><em>$1.49</em></li>
         <li><span>Tip Cup: a thank-you for the counter. It unlocks nothing.</span><em>$0.99</em></li>
       </ul>
@@ -178,7 +209,7 @@
       <a href="privacy.html">Privacy Policy</a>
       <a href="support.html">Support</a>
     </nav>
-    <p>© 2026 Tapioca Junction. iPhone is a trademark of Apple Inc.</p>
+    <p>© 2026 Luong Nguyen. iPhone is a trademark of Apple Inc.</p>
   </footer>
 </div>
 </body>

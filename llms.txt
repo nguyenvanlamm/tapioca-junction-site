@@ -1,0 +1,17 @@
+# Tapioca Junction
+
+> Tapioca Junction is a calm logic puzzle for iPhone set at a bubble-tea counter after dark. Jelly pearls drop from glass jars through clear tubes, and at every junction a flipper sends a pearl the way it points, then flips to the other side by itself; you set the flippers before you pour, so the route you choose and the order of the pearls in the jar decide which cup each pearl reaches, and three pearls of a flavour seal a cup. Coming soon to iPhone on the App Store.
+
+- Rules: tap a flipper to turn it (pinned flippers stay put), then tap a jar to pour; its pearls drop one by one, bottom first. Seal every cup to finish the order ("Order up!"). A pearl that reaches the wrong cup rides the straw up to the return jar; tap the return jar to send them again, oldest first. If the return jar overflows the counter jams, and Restart is always free.
+- Content: 80 orders in four menus of 20. House Classics (flippers, jars, the return jar) and Fruit Teas (pinned flippers) are free; Cheese Foam (one-way gates that sort a single flavour) and Late Night (flippers on a rod that turn together) come with the Full Menu. Every order has a solution, checked by a solver; no luck and no random physics.
+- Flavours: taro, matcha, mango, strawberry, blueberry, lychee and brown sugar, each with its own stamp (ring, leaf, diamond, three dots, star, heart, swirl), so pearls never have to be told apart by colour alone.
+- Helps (optional): Undo takes back the last pour, Peek shows where every pearl of a jar will go, Wide Jar gives the return jar two more places for the order. You start with 3 Undo, 3 Peek and 2 Wide Jar and earn more on first clears of milestone orders.
+- Price: free to download (the App Store lists the price). Optional in-app purchases: Full Menu ($3.49, one-time; opens Cheese Foam order 1 at once, and Late Night after Cheese Foam), Barista's Apron ($1.49; 5 Undo, 5 Peek and 3 Wide Jar), Tip Cup ($0.99; a thank-you that unlocks nothing). Restore purchases is in The Counter and in Settings.
+- No timers, no lives, no energy, no ads, no account, no analytics or tracking. Progress stays on the device and the game plays offline; only purchases talk to the App Store. English only.
+- Made by Luong Nguyen. Contact: lamnv260398@gmail.com.
+
+## Pages
+
+- [Home](https://nguyenvanlamm.github.io/tapioca-junction-site/): what the game is, how an order plays, the four menus, helps, prices and FAQ
+- [Support](https://nguyenvanlamm.github.io/tapioca-junction-site/support.html): contact, how to play, purchases and restoring, progress
+- [Privacy Policy](https://nguyenvanlamm.github.io/tapioca-junction-site/privacy.html): what the game stores on the device and what it never collects
