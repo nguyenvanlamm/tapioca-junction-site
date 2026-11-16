@@ -1,0 +1,30 @@
+{
+ "title": "Tapioca Junction: a bubble-tea logic puzzle for iPhone",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "description": "Set the flippers, pour the jar and watch every jelly pearl find its cup. A calm bubble-tea logic puzzle for iPhone, coming soon. No ads, no timers.",
+  "author": "Luong Nguyen",
+  "robots": "index, follow, max-image-preview:large",
+  "og:type": "website",
+  "og:site_name": "Tapioca Junction",
+  "og:locale": "en_US",
+  "og:url": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+  "og:title": "Tapioca Junction: a bubble-tea logic puzzle for iPhone",
+  "og:description": "Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone. No ads, no timers.",
+  "og:image": "https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg",
+  "og:image:width": "1200",
+  "og:image:height": "630",
+  "og:image:alt": "Tapioca Junction: Set the flippers. Pour the jar. Order up. Beside it, an order in play: jars of jelly pearls above clear tubes with flippers.",
+  "twitter:card": "summary_large_image",
+  "twitter:title": "Tapioca Junction: a bubble-tea logic puzzle for iPhone",
+  "twitter:description": "Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone.",
+  "twitter:image": "https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg",
+  "twitter:image:alt": "Tapioca Junction: Set the flippers. Pour the jar. Order up. Beside it, an order in play.",
+  "theme-color": "#140C09",
+  "color-scheme": "dark"
+ },
+ "canonical": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[\n{\"@type\":[\"VideoGame\",\"MobileApplication\"],\"@id\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/#game\",\"name\":\"Tapioca Junction\",\"url\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/\",\"description\":\"A calm logic puzzle for iPhone at a bubble-tea counter after dark: set the flippers, pour a jar of jelly pearls through clear tubes, and seal every cup. Every flipper flips after each pearl, so the route you set decides where each pearl lands. Coming soon to the App Store.\",\"creativeWorkStatus\":\"Upcoming\",\"genre\":[\"Puzzle\",\"Casual\"],\"gamePlatform\":\"iPhone\",\"operatingSystem\":\"iOS\",\"applicationCategory\":\"GameApplication\",\"applicationSubCategory\":\"Puzzle\",\"inLanguage\":\"en\",\"playMode\":\"SinglePlayer\",\"numberOfPlayers\":{\"@type\":\"QuantitativeValue\",\"value\":1},\"image\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg\",\"screenshot\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png\",\"author\":{\"@type\":\"Person\",\"name\":\"Luong Nguyen\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Luong Nguyen\"}},\n{\"@type\":\"WebSite\",\"@id\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/#site\",\"name\":\"Tapioca Junction\",\"url\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/\",\"inLanguage\":\"en\",\"about\":{\"@id\":\"https://nguyenvanlamm.github.io/tapioca-junction-site/#game\"}},\n{\"@type\":\"FAQPage\",\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"When can I play?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Tapioca Junction is coming soon to iPhone. This page will link to the App Store as soon as it is live.\"}},\n{\"@type\":\"Question\",\"name\":\"Is there a timer or an energy system?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. There are no timers, hearts or waits. A jam only ends that attempt, and Restart is always free.\"}},\n{\"@type\":\"Question\",\"name\":\"Does it show ads or track me?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No ads, no analytics, no account. Progress stays on your phone.\"}},\n{\"@type\":\"Question\",\"name\":\"I'm colour-blind. Can I play?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Every flavour carries its own stamp inside the pearl and on its cup, so shape alone tells you where a pearl belongs.\"}},\n{\"@type\":\"Question\",\"name\":\"Does it work offline?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Everything runs on the device; only purchases talk to the App Store.\"}}]}]}"
+ ]
+}

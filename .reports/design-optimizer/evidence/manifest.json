@@ -1,0 +1,36 @@
+{
+ "url": "http://127.0.0.1:8747/",
+ "public_url": "https://nguyenvanlamm.github.io/tapioca-junction-site/",
+ "captured_at": "2026-11-17T04:40:00Z",
+ "target_type": "local-repo-served",
+ "note": "Captured from the s9-site worktree after the search-optimizer fixes (meta/OG/JSON-LD, robots.txt, sitemap.xml, llms.txt, 404.html, icons). Site root files are in the worktree root; the host-root robots.txt/llms.txt are in ../search-optimizer/evidence.",
+ "audience": "adults 25-50 who play calm logic/sort puzzles on iPhone in short breaks",
+ "primary_goal": "explain the game and its prices before launch; route questions to support; no store link yet (coming soon)",
+ "files": {
+  "page.html": {"status": "rendered DOM, headless Chrome 390 px"},
+  "head.json": {"status": "derived from index.html"},
+  "screenshots/index-390.png": {"status": "captured", "viewport": "390x844"},
+  "screenshots/index-390-full.png": {"status": "captured"},
+  "screenshots/index-1280.png": {"status": "captured", "viewport": "1280x800"},
+  "screenshots/index-1280-full.png": {"status": "captured"},
+  "screenshots/support-390-full.png": {"status": "captured"},
+  "screenshots/privacy-390-full.png": {"status": "captured"},
+  "screenshots/404-390.png": {"status": "captured"},
+  "robots.txt": {"status": "repo file", "path": "../../../robots.txt"},
+  "sitemap.xml": {"status": "repo file", "path": "../../../sitemap.xml"},
+  "llms.txt": {"status": "repo file", "path": "../../../llms.txt"}
+ },
+ "measurements": {
+  "horizontal_overflow_390": "none on index, support, privacy, 404",
+  "fonts_loaded": "Sora 400/600/700, DM Mono 400/500 on index; support/privacy use system-ui only"
+ },
+ "owners": {
+  "clarity": "dont-make-me-think",
+  "brand": "ux-ax-review", "responsive": "ux-ax-review", "accessibility": "ux-ax-review",
+  "performance": "ux-ax-review", "conversion": "ux-ax-review",
+  "robots-sitemap": "ux-ax-review", "markdown-pages": "ux-ax-review", "crawler-access": "ux-ax-review",
+  "structured-data": "ux-ax-review", "llms-txt": "ux-ax-review", "ai-actions": "ux-ax-review",
+  "agent-readiness-scan": "not-covered: owner did not allow an outside scan (G4)",
+  "virality": "viral-product-evaluator", "meta-tags": "viral-product-evaluator"
+ }
+}

@@ -30,7 +30,7 @@
 <link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":["VideoGame","MobileApplication"],"@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#game","name":"Tapioca Junction","url":"https://nguyenvanlamm.github.io/tapioca-junction-site/","description":"A calm logic puzzle for iPhone at a bubble-tea counter after dark: set the flippers, pour a jar of jelly pearls through clear tubes, and seal every cup. Every flipper flips after each pearl, so the route you set decides where each pearl lands. Coming soon to the App Store.","creativeWorkStatus":"Upcoming","genre":["Puzzle","Casual"],"gamePlatform":"iPhone","operatingSystem":"iOS","applicationCategory":"GameApplication","applicationSubCategory":"Puzzle","inLanguage":"en","playMode":"SinglePlayer","numberOfPlayers":{"@type":"QuantitativeValue","value":1},"image":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg","screenshot":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png","author":{"@type":"Person","name":"Luong Nguyen"},"publisher":{"@type":"Person","name":"Luong Nguyen"}},
+{"@type":["VideoGame","MobileApplication"],"@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#game","name":"Tapioca Junction","url":"https://nguyenvanlamm.github.io/tapioca-junction-site/","description":"A calm logic puzzle for iPhone at a bubble-tea counter after dark: set the flippers, pour a jar of jelly pearls through clear tubes, and seal every cup. A flipper flips after every pearl it sends, so the route you set decides where each pearl lands. Coming soon to the App Store.","creativeWorkStatus":"Upcoming","genre":["Puzzle","Casual"],"gamePlatform":"iPhone","operatingSystem":"iOS","applicationCategory":"GameApplication","applicationSubCategory":"Puzzle","inLanguage":"en","playMode":"SinglePlayer","numberOfPlayers":{"@type":"QuantitativeValue","value":1},"image":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/share-card.jpg","screenshot":"https://nguyenvanlamm.github.io/tapioca-junction-site/assets/game.png","author":{"@type":"Person","name":"Luong Nguyen"},"publisher":{"@type":"Person","name":"Luong Nguyen"}},
 {"@type":"WebSite","@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#site","name":"Tapioca Junction","url":"https://nguyenvanlamm.github.io/tapioca-junction-site/","inLanguage":"en","about":{"@id":"https://nguyenvanlamm.github.io/tapioca-junction-site/#game"}},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"When can I play?","acceptedAnswer":{"@type":"Answer","text":"Tapioca Junction is coming soon to iPhone. This page will link to the App Store as soon as it is live."}},
@@ -53,9 +53,16 @@
   body { margin: 0; background: var(--stage); color: var(--ink); font: 17px/1.6 Sora, system-ui, -apple-system, sans-serif; }
   a { color: var(--accentText); }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -999px; top: 8px; z-index: 10; background: var(--surface); color: var(--ink); padding: 10px 14px; border-radius: 10px; }
+  .skip:focus { left: 16px; }
+  :focus-visible { outline: 2px solid var(--taro); outline-offset: 3px; }
   header.top { display: flex; align-items: center; gap: 12px; padding: 20px 0; }
+  header.top .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
   header.top img { width: 40px; height: 40px; border-radius: 10px; }
-  header.top span { font-weight: 600; letter-spacing: .02em; }
+  header.top .brand span { font-weight: 600; letter-spacing: .02em; }
+  header.top nav { margin-left: auto; display: flex; gap: 4px 20px; font: 500 14px/1.4 "DM Mono", monospace; }
+  header.top nav a { color: var(--ink2); text-decoration: none; padding: 12px 0; }
+  header.top nav a:hover { color: var(--ink); text-decoration: underline; }
   .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px;
     background: radial-gradient(60% 60% at 75% 45%, rgba(171,59,137,.22), transparent 70%); }
   .eyebrow { font: 500 13px/1.4 "DM Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--ink3); margin: 0 0 16px; }
@@ -65,7 +72,7 @@
     background: linear-gradient(90deg, var(--accentA), var(--accentMid), var(--accentB)); }
   .facts { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 8px 18px;
     font: 400 14px/1.4 "DM Mono", monospace; color: var(--ink3); }
-  .facts li::before { content: "● "; color: var(--taro); }
+  .facts li::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--taro); margin-right: 8px; vertical-align: 2px; }
   .hero picture { justify-self: center; display: block; width: min(340px, 100%); }
   .shot { display: block; width: 100%; height: auto; border-radius: 34px; border: 1px solid var(--line);
     box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 60px rgba(137,81,191,.25); }
@@ -93,32 +100,45 @@
   dl { max-width: 44em; margin: 0; }
   dt { font-weight: 600; margin-top: 24px; }
   dd { margin: 6px 0 0; color: var(--ink2); }
+  .prices-note { color: var(--ink3); font-size: 15px; margin: 16px 0 0; max-width: 44em; }
   .final { text-align: center; }
-  .final p { color: var(--ink2); }
+  .final p { color: var(--ink2); max-width: 32em; margin-left: auto; margin-right: auto; }
+  .final .actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px; }
+  .btn[hidden] { display: none; }
+  .final button.btn { border: 0; font: inherit; font-weight: 600; cursor: pointer; }
+  .final .alt { padding: 12px 0; }
+  .final [role="status"] { min-height: 1.6em; margin-top: 12px; font: 400 14px/1.6 "DM Mono", monospace; color: var(--ink3); }
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--ink3); font-size: 15px; }
-  footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+  footer nav { display: flex; gap: 0 20px; flex-wrap: wrap; }
+  footer nav a { display: inline-block; padding: 10px 0; }
   @media (max-width: 820px) {
     .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 16px; }
     .grid, .steps { grid-template-columns: 1fr; }
     .menus { grid-template-columns: 1fr 1fr; }
   }
+  @media (max-width: 560px) { header.top nav .wide { display: none; } }
   @media (max-width: 480px) { .menus { grid-template-columns: 1fr; } .prices li { flex-direction: column; gap: 4px; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
   <header class="top">
-    <img src="assets/icon-180.png" alt="" width="40" height="40">
-    <span>Tapioca Junction</span>
+    <a class="brand" href="./"><img src="assets/icon-180.png" alt="" width="40" height="40"><span>Tapioca Junction</span></a>
+    <nav aria-label="Page">
+      <a class="wide" href="#how">How it plays</a>
+      <a href="#price-h">Prices</a>
+      <a href="support.html">Support</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
     <div class="hero">
       <div>
         <p class="eyebrow">Coming soon to iPhone</p>
         <h1>Set the flippers. Pour the jar. Order&nbsp;up.</h1>
-        <p class="sub">A calm logic puzzle at a bubble-tea counter after dark. Every pearl flips the flipper it passes, so each jar runs down the route you set before you poured, pearl by pearl.</p>
-        <a class="btn" href="#how">See how a jar plays out</a>
+        <p class="sub">A calm logic puzzle at a bubble-tea counter after dark. A flipper flips after every pearl it sends, so the route you set decides where each pearl lands.</p>
+        <a class="btn" href="#how">See how it plays</a>
         <ul class="facts">
           <li>No ads</li><li>No timers or lives</li><li>Plays offline</li><li>40 orders free</li>
         </ul>
@@ -132,10 +152,10 @@
 
     <section aria-labelledby="track">
       <h2 id="track">The track is the puzzle</h2>
-      <p class="lead">A flipper sends one pearl its way, then flips by itself. Six pearls down one junction go left, right, left, right. You decide where the flippers point before you pour, then watch it run.</p>
+      <p class="lead">A flipper sends one pearl its way, then flips by itself. Pearls down one junction go left, right, left, right, and so on. You decide where the flippers point before you pour, then watch it run.</p>
       <div class="grid">
         <div class="card"><h3>Three of a flavour, sealed</h3><p>A cup takes three pearls of its flavour, then the press comes down. Pshh. The next cup slides up.</p></div>
-        <div class="card"><h3>Misses come back</h3><p>A pearl that reaches the wrong cup rides the straw up to the return jar. Tap it to send them again, oldest first.</p></div>
+        <div class="card"><h3>Misses come back</h3><p>A pearl that reaches the wrong cup rides the straw up to the return jar. Tap the return jar to send them again, oldest first.</p></div>
         <div class="card"><h3>Jammed, never timed</h3><p>Fill the return jar and the counter jams. There is no clock and no lives: restart the order whenever you like.</p></div>
       </div>
     </section>
@@ -156,29 +176,30 @@
       <div class="menus">
         <div class="menu"><b>I</b><h3>House Classics</h3><p>Flippers, jars and the return jar.</p><span class="tag">Free</span></div>
         <div class="menu"><b>II</b><h3>Fruit Teas</h3><p>Pinned flippers that never turn.</p><span class="tag">Free</span></div>
-        <div class="menu"><b>III</b><h3>Cheese Foam</h3><p>One-way gates that sort a single flavour.</p><span class="tag">Full Menu</span></div>
-        <div class="menu"><b>IV</b><h3>Late Night</h3><p>Flippers on a rod that turn together.</p><span class="tag">Full Menu</span></div>
+        <div class="menu"><b>III</b><h3>Cheese Foam</h3><p>One-way gates that sort a single flavour.</p><span class="tag">Full Menu · $3.49</span></div>
+        <div class="menu"><b>IV</b><h3>Late Night</h3><p>Flippers on a rod that turn together.</p><span class="tag">Full Menu · $3.49</span></div>
       </div>
     </section>
 
     <section aria-labelledby="see-h">
-      <h2 id="see-h">Made to be read at a glance</h2>
+      <h2 id="see-h">Made for calm play</h2>
       <div class="grid">
-        <div class="card"><h3>A stamp for every flavour</h3><p>Taro has a ring, matcha a leaf, mango a diamond, strawberry three dots, blueberry a star. You can tell pearls apart without relying on colour.</p></div>
-        <div class="card"><h3>Three helps</h3><p>Undo your last pour, Peek at a jar's whole route before you pour it, or open a Wide Jar for more return room. You start with a few and earn more the first time you clear milestone orders.</p></div>
+        <div class="card"><h3>A stamp for every flavour</h3><p>Taro has a ring, matcha a leaf, mango a diamond, strawberry three dots, blueberry a star, lychee a heart, brown sugar a swirl. You can tell pearls apart without relying on colour.</p></div>
+        <div class="card"><h3>Three helps</h3><p>Undo your last pour, Peek at a jar's whole route before you pour it, or open a Wide Jar for more return room. You start with 3 Undo, 3 Peek and 2 Wide Jar, and earn more the first time you clear every fifth order of a menu.</p></div>
         <div class="card"><h3>Quiet by design</h3><p>No ads, no accounts, no notifications nagging you back. Sound effects you can switch off in Settings.</p></div>
       </div>
     </section>
 
     <section aria-labelledby="price-h">
       <h2 id="price-h">What it costs</h2>
-      <p class="lead">The first two menus are free to play from start to finish.</p>
+      <p class="lead">Free to download. The first two menus are free to play from start to finish.</p>
       <ul class="prices">
         <li><span>House Classics and Fruit Teas: 40 orders</span><em>Free</em></li>
-        <li><span>Full Menu: Cheese Foam and Late Night, 40 more orders. Cheese Foam order 1 opens at once; Late Night opens when you finish Cheese Foam. Bought once, yours to restore.</span><em>$3.49</em></li>
+        <li><span>Full Menu: Cheese Foam and Late Night, 40 more orders. Cheese Foam opens the moment you buy it; Late Night follows it. One-time, restorable.</span><em>$3.49</em></li>
         <li><span>Barista's Apron: 5 Undo, 5 Peek and 3 Wide Jar</span><em>$1.49</em></li>
         <li><span>Tip Cup: a thank-you for the counter. It unlocks nothing.</span><em>$0.99</em></li>
       </ul>
+      <p class="prices-note">Prices in US dollars; the App Store shows the price in your currency.</p>
     </section>
 
     <section aria-labelledby="faq-h">
@@ -199,8 +220,12 @@
 
     <section class="final" aria-labelledby="final-h">
       <h2 id="final-h">The counter opens soon</h2>
-      <p>Questions before then? We read every message.</p>
-      <a class="btn" href="support.html">Contact support</a>
+      <p>Know someone who likes a quiet puzzle after a long day? Send them the counter.</p>
+      <div class="actions">
+        <button class="btn" type="button" id="share" hidden>Share Tapioca Junction</button>
+        <a class="alt" href="support.html">Questions? Contact support</a>
+      </div>
+      <p role="status" id="share-status"></p>
     </section>
   </main>
 
@@ -212,5 +237,29 @@
     <p>© 2026 Luong Nguyen. iPhone is a trademark of Apple Inc.</p>
   </footer>
 </div>
+<script>
+  (function () {
+    var url = 'https://nguyenvanlamm.github.io/tapioca-junction-site/';
+    var data = { title: 'Tapioca Junction', text: 'Set the flippers. Pour the jar. Order up. A calm bubble-tea logic puzzle, coming soon to iPhone.', url: url };
+    var button = document.getElementById('share');
+    var status = document.getElementById('share-status');
+    var canShare = !!navigator.share;
+    var canCopy = !!(navigator.clipboard && window.isSecureContext);
+    if (!canShare && !canCopy) return;
+    if (!canShare) button.textContent = 'Copy the link';
+    button.hidden = false;
+    button.addEventListener('click', function () {
+      if (canShare) {
+        navigator.share(data).catch(function () {});
+        return;
+      }
+      navigator.clipboard.writeText(url).then(function () {
+        status.textContent = 'Link copied. Paste it anywhere.';
+      }, function () {
+        status.textContent = 'Copy failed. The link is ' + url;
+      });
+    });
+  })();
+</script>
 </body>
 </html>
